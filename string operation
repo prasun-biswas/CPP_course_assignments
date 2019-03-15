@@ -1,0 +1,8 @@
+ // split a string and store it in a vector
+ vector<string> result;
+    stringstream ss(ip_s);
+    while(ss.good()){
+        string substr;
+        getline(ss,substr,'.');
+        result.push_back (substr);
+    }
