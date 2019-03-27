@@ -1,0 +1,57 @@
+Matrix Matrix::add(const Matrix& mat2) const {
+    if ( linecount() != mat2.linecount()
+         or columncount() != mat2.columncount() ) {
+
+        // Exception should be thrown here, if only we knew how..
+        // maybe something like:
+        //
+        // throw out_of_range;
+    }
+
+    Matrix result(mat2);
+
+    int line = 0;
+    while ( line < linecount() ) {
+        int column = 0;
+        while ( column < columncount() ) {
+            // result.data_.at(line).at(column) += data_.at(line).at(column);
+            result.set(line, column,
+                       result.get(line, column) + get(line, column));
+            ++column;
+        }
+        ++line;
+    }
+
+    return result;
+}
+
+
+Matrix Matrix::sub(const Matrix& mat2) const {
+    Matrix temporary(mat2);
+
+    for ( vector<double>& linevec : temporary.data_ ) {
+        for ( double& element : linevec ) {
+            // Since both linevec and elements are references inside
+            // this loop, modifying the value of element, will change
+            // the values of the original data_ in the private part
+            // of temporary matrix.
+
+            element = -element;
+        }
+    }
+
+    // Here every element of temporary matrix has been negated.
+    return add(temporary);
+}
+
+
+Matrix Matrix::mul(const Matrix& mat2) const {
+    Matrix result(linecount(), mat2.columncount());
+
+    // Not implemented. Would not really show any new
+    // insights into how to use vector.
+
+    // Â·Â·Â·
+
+    return result;
+}
