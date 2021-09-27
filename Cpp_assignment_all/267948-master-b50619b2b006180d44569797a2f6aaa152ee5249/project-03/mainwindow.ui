@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>628</width>
+    <height>318</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="gender_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>45</width>
+      <height>10</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Gender</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="show_gen_label">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>40</y>
+      <width>45</width>
+      <height>10</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>female</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="weight_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Weight (kg)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="height_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>height (cm)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="BMI_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>160</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Body mass index -</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="show_BMI_label">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>160</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>showBMI</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="interpret_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>200</y>
+      <width>131</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Interpretation -</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="show_intrp_label">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>200</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>showInter</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="weight_spinBox">
+    <property name="geometry">
+     <rect>
+      <x>151</x>
+      <y>80</y>
+      <width>71</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>300</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="height_spinBox">
+    <property name="geometry">
+     <rect>
+      <x>151</x>
+      <y>120</y>
+      <width>71</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>300</number>
+    </property>
+   </widget>
+   <widget class="QSlider" name="weight_horizontalSlider">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>80</y>
+      <width>341</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>300</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="height_horizontalSlider">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>120</y>
+      <width>341</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>300</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>628</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuAction">
+    <property name="title">
+     <string>Action</string>
+    </property>
+    <addaction name="actionReset"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuGender">
+    <property name="title">
+     <string>Gender</string>
+    </property>
+    <addaction name="actionFemale"/>
+    <addaction name="actionMale"/>
+   </widget>
+   <addaction name="menuAction"/>
+   <addaction name="menuGender"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionReset">
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionFemale">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Female</string>
+   </property>
+  </action>
+  <action name="actionMale">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Male</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>weight_horizontalSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>weight_spinBox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>263</x>
+     <y>117</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>182</x>
+     <y>117</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>height_horizontalSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>height_spinBox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>278</x>
+     <y>155</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>157</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>height_spinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>height_horizontalSlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>199</x>
+     <y>165</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>152</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>weight_spinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>weight_horizontalSlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>198</x>
+     <y>120</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>349</x>
+     <y>115</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
